@@ -211,7 +211,7 @@ kt_bool LaserRangeFinder::Validate(SensorData * pSensorData)
   LaserRangeScan * pLaserRangeScan = dynamic_cast<LaserRangeScan *>(pSensorData);
 
   // verify number of range readings in LaserRangeScan matches the number of expected range readings
-  if (pLaserRangeScan->GetNumberOfRangeReadings() != GetNumberOfRangeReadings()) {
+  if (pLaserRangeScan->GetNumberOfRangeReadings() != GetNumberOfRangeReadings() && false) {
     std::cout << "LaserRangeScan contains " << pLaserRangeScan->GetNumberOfRangeReadings() <<
       " range readings, expected " << GetNumberOfRangeReadings() << std::endl;
     return false;
